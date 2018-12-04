@@ -8,9 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ReminderData.h"
-#if 1
 #import <UserNotifications/UserNotifications.h>
-#endif
 #import <CloudKit/CloudKit.h>
 @interface AppDelegate ()
 
