@@ -11,7 +11,9 @@
 #import <UserNotifications/UserNotifications.h>
 #import <CloudKit/CloudKit.h>
 @interface AppDelegate ()
-//检验sourcetree1.0
+//imac检验sourcetree1.0
+//mabookpro上增加内容1.0
+//imac合并冲突1.0
 @end
 
 @implementation AppDelegate
