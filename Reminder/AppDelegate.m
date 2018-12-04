@@ -8,12 +8,13 @@
 
 #import "AppDelegate.h"
 #import "ReminderData.h"
-#if 1
 #import <UserNotifications/UserNotifications.h>
-#endif
 #import <CloudKit/CloudKit.h>
 @interface AppDelegate ()
+
 //mabookpro上增加内容1.0
+//检验sourcetree1.0
+
 @end
 
 @implementation AppDelegate
