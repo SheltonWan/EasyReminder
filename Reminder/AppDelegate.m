@@ -11,19 +11,16 @@
 #import <UserNotifications/UserNotifications.h>
 #import <CloudKit/CloudKit.h>
 @interface AppDelegate ()
-
+//imac检验sourcetree1.0
 //mabookpro上增加内容1.0
-//检验sourcetree1.0
-
+//imac合并冲突1.0
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-//    NSLog(@"%@...",launchOptions);
-    // Register for push notifications
+//imac删除注释
     UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert categories:nil];
     [application registerUserNotificationSettings:notificationSettings];
     [application registerForRemoteNotifications];
