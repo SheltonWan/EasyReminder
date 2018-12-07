@@ -15,6 +15,7 @@
 //mabookpro上增加内容1.0
 //imac合并冲突1.0
 //macbookpro新添加内容2.0
+//imac增加一行内容2.0
 @end
 
 @implementation AppDelegate
