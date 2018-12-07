@@ -48,7 +48,7 @@
     application.applicationIconBadgeNumber = 0;
     
     
-
+//add code by macbook pro 2018.12.7.4.54
     return YES;
 }
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
