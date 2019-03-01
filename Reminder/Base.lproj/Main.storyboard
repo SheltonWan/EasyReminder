@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nDI-Nt-UJh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nDI-Nt-UJh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -260,7 +260,7 @@
         <!--Navigation Controller Ex-->
         <scene sceneID="a0W-2b-3Zi">
             <objects>
-                <navigationController id="nDI-Nt-UJh" customClass="UINavigationControllerEx" sceneMemberID="viewController">
+                <navigationController wantsFullScreenLayout="YES" id="nDI-Nt-UJh" customClass="UINavigationControllerEx" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KqI-TQ-Qug" customClass="UINavigationBarEx">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -305,18 +305,18 @@
         <image name="button_date" width="257" height="34"/>
         <image name="button_repeat" width="257" height="34"/>
         <image name="button_time" width="257" height="34"/>
-        <image name="checkbox_background" width="16" height="17"/>
-        <image name="checkbox_background_selected" width="16" height="17"/>
+        <image name="checkbox_background" width="16.5" height="17"/>
+        <image name="checkbox_background_selected" width="16.5" height="17"/>
         <image name="event_background" width="311" height="408"/>
-        <image name="event_button_delete" width="257" height="42"/>
+        <image name="event_button_delete" width="257" height="42.5"/>
         <image name="tabbaritem_all_click" width="22" height="19"/>
-        <image name="tabbaritem_all_normal" width="22" height="18"/>
-        <image name="tabbaritem_birth_click" width="24" height="23"/>
+        <image name="tabbaritem_all_normal" width="22" height="18.5"/>
+        <image name="tabbaritem_birth_click" width="24" height="23.5"/>
         <image name="tabbaritem_birth_normal" width="24" height="23"/>
-        <image name="tabbaritem_event_click" width="22" height="23"/>
-        <image name="tabbaritem_event_normal" width="22" height="22"/>
+        <image name="tabbaritem_event_click" width="22.5" height="23"/>
+        <image name="tabbaritem_event_normal" width="22.5" height="22.5"/>
         <image name="tabbaritem_heart_click" width="23" height="21"/>
-        <image name="tabbaritem_heart_normal" width="23" height="20"/>
+        <image name="tabbaritem_heart_normal" width="23" height="20.5"/>
         <image name="toolbar_bg" width="320" height="52"/>
     </resources>
 </document>

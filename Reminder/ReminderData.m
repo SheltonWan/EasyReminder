@@ -1146,8 +1146,9 @@ static ReminderData* g_dataModule = nil;
              completionHandler:^(CKSubscription *sub, NSError *error) {
                  if (error)
                  {
-                     [self displayError:error];
-                     // insert error handling
+                     dispatch_async(dispatch_get_main_queue(), ^{
+                         [self displayError:error];
+                     });
                  }
              }
      ];
@@ -1156,14 +1157,17 @@ static ReminderData* g_dataModule = nil;
 {
     [[CKContainer defaultContainer] accountStatusWithCompletionHandler:^(CKAccountStatus accountStatus, NSError *error) {
         if (accountStatus == CKAccountStatusNoAccount) {
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Sign in to iCloud"
-                                                                           message:@"Sign in to your iCloud account to synchronize event data. On the Home screen, launch Settings, tap iCloud, and enter your Apple ID. Turn iCloud Drive on. If you don't have an iCloud account, tap Create a new Apple ID."
-                                                                    preferredStyle:UIAlertControllerStyleAlert];
-            [alert addAction:[UIAlertAction actionWithTitle:@"Okay"
-                                                      style:UIAlertActionStyleCancel
-                                                    handler:nil]];
-            assert([UIApplication sharedApplication].keyWindow !=nil);
-            [[UIApplication sharedApplication].keyWindow.rootViewController  presentViewController:alert animated:YES completion:nil];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Sign in to iCloud"
+                                                                               message:@"Sign in to your iCloud account to synchronize event data. On the Home screen, launch Settings, tap iCloud, and enter your Apple ID. Turn iCloud Drive on. If you don't have an iCloud account, tap Create a new Apple ID."
+                                                                        preferredStyle:UIAlertControllerStyleAlert];
+                [alert addAction:[UIAlertAction actionWithTitle:@"Okay"
+                                                          style:UIAlertActionStyleCancel
+                                                        handler:nil]];
+                assert([UIApplication sharedApplication].keyWindow !=nil);
+                [[UIApplication sharedApplication].keyWindow.rootViewController  presentViewController:alert animated:YES completion:nil];
+            });
+
         }
         else {
 
@@ -1178,40 +1182,20 @@ static ReminderData* g_dataModule = nil;
                 }
                 else{
                     for (CKSubscription* subscription in subscriptions) {
-//                        [database deleteSubscriptionWithID:subscription.subscriptionID completionHandler:^(NSString * _Nullable subscriptionID, NSError * _Nullable error) {
-//                            if (error)
-//                            {
-//                                [self displayError:error];
-//                                // insert error handling
-//                            }
-//                            else{
-//                                [self subscriptionEventNotification];
-//                            }
-//
-//                        }];
                         
                         [database saveSubscription:subscription
                                  completionHandler:^(CKSubscription *sub, NSError *error) {
                                      if (error)
                                      {
-                                         [self displayError:error];
-                                         // insert error handling
+                                         dispatch_async(dispatch_get_main_queue(), ^{
+                                             [self displayError:error];
+                                         });
                                      }
                                  }
                          ];
                     }
                 }
             }];
-            
-//            [database fetchSubscriptionWithID:@"B086760C-69A0-4D52-8963-F0B3A38C85F2" completionHandler:^(CKSubscription * _Nullable subscription, NSError * _Nullable error) {
-//                if (error) {
-////                    [self displayError:error];
-//                    
-//
-//                }
-//            }];
-            
-
             
         }
     }];
